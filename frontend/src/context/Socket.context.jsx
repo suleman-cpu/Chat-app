@@ -30,7 +30,7 @@ export function SocketContextprovider({children}) {
       
           }else{
               if(socket){
-                  console.log("hi")
+              
                   socket.close()
                   setSocket(null)
               }

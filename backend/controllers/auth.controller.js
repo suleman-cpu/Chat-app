@@ -1,7 +1,10 @@
-import Users from "../models/user.model.js";
 import bcrypt from "bcryptjs";
+
 import generateTokenandSetCookie from "../utils/generateToken.js"
+
 import User from "../models/user.model.js";
+import Users from "../models/user.model.js";
+
 export const signup = async (req, res) => {
     try {
         const { fullname, username, password, confirmPassword, gender } = req.body;
@@ -12,7 +15,7 @@ export const signup = async (req, res) => {
         const salt = await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(password, salt)
 
-        // harsh
+        
         let user = await Users.findOne({ username: username })
         if (user) {
             return res.status(400).json({ error: "Username already taken!" });
@@ -43,6 +46,7 @@ export const signup = async (req, res) => {
         res.status(500).json({ error: "Internal server error" })
     }
 }
+
 export const login = async (req, res) => {
     try {
         const { username, password } = req.body
@@ -67,6 +71,7 @@ export const login = async (req, res) => {
         res.status(500).json({ error: "Internal server error" })
     }
 }
+
 export const logout = async (req, res) => {
     try {
         res.cookie("jwt","",{maxAge:0})

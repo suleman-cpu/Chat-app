@@ -1,4 +1,5 @@
 import User from "../models/user.model.js"
+
 const getUserForSideBar =async (req,res)=>{
     try {
         const loginUserId = req.user._id        

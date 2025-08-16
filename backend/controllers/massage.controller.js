@@ -1,6 +1,8 @@
 import Conversations from "../models/conversation.model.js"
 import MassageModel from "../models/massage.model.js"
+
 import {io,socketID} from "../socket/socket.js"
+
 export const sendMassage = async (req, res) => {
     try {
     const { Id:receiver } = req.params;
@@ -26,7 +28,7 @@ export const sendMassage = async (req, res) => {
     await Promise.all([conversation.save(),newMassage.save()])
 
     if(socketID(receiver)){
-        console.log(socketID(receiver))
+        
         io.to(socketID(receiver)).emit("newMassage",newMassage)
     }
     res.status(201).json(newMassage)

@@ -43,26 +43,27 @@ const Login = () => {
                 position="top-right"
                 reverseOrder={false}
             />
+            
             <div data-theme="night" className="bg-transparent">
-                <div className="h-[90vh] w-[70vh]  bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-90 border border-gray-100 ">
+                <div className="md:h-[90vh] h-[80vh] md:w-[34vw] w-[90vw]  bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-90 border border-gray-100 ">
 
-                    <div className="flex items-center justify-center h-full flex-col " >
+                    <div className="flex items-center justify-center h-full flex-col w-[100%]" >
                         <h1 className="text-3xl  font-bold">Signup <span className="text-blue-800">Chatapp</span></h1>
-                        <form onSubmit={handleSubmit} className="text-gray-100 flex flex-col ">
+                        <form onSubmit={handleSubmit} className="text-gray-100 flex flex-col w-[70%]">
 
                             <label className="label text-sm ml-2 mt-4 mb-2" name="fullname" >Fullname
 
                             </label>
-                            <input type="text" placeholder="Enter Fullname" className="input input-neutral  w-[22vw] mb-2" name="fullname" onChange={handeChange} />
+                            <input type="text" placeholder="Enter Fullname" className="input input-neutral  w-[100%] md:w-[24vw] mb-2" name="fullname" onChange={handeChange} />
 
                             <label className="label text-sm ml-2  mb-2" name="username">Username</label>
-                            <input type="password" placeholder="Enter Username" className="input input-neutral  w-[22vw] mb-2" name="username" onChange={handeChange} />
+                            <input type="password" placeholder="Enter Username" className="input input-neutral  w-[100%] md:w-[24vw] mb-2" name="username" onChange={handeChange} />
 
                             <label className="label text-sm ml-2  mb-2" name="password">Password</label>
-                            <input type="password" placeholder="Enter  Password" className="input input-neutral  w-[22vw] mb-2" name="password" onChange={handeChange} />
+                            <input type="password" placeholder="Enter  Password" className="input input-neutral  w-[100%] md:w-[24vw] mb-2" name="password" onChange={handeChange} />
 
                             <label className="label text-sm ml-2  mb-2" name="confirmPassword">Confirm password</label>
-                            <input type="password" placeholder="Confirm Password" className="input input-neutral  w-[22vw] mb-2 " name="confirmPassword" onChange={handeChange} />
+                            <input type="password" placeholder="Confirm Password" className="input input-neutral  w-[100%] md:w-[24vw] mb-2 " name="confirmPassword" onChange={handeChange} />
 
                             <div className="flex gap-4 ml-2 mb-2 text-sm">
                                 <span className="flex gap-2">

@@ -14,9 +14,9 @@ const Home = () => {
   return (
     <div data-theme="night" className="bg-transparent h-[100vh] flex justify-center items-center">
 
-      <div className="h-[90vh] w-[90vw]  bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-90 border border-gray-100 flex">
+      <div className="h-[98vh] w-[94vw] md:h-[90vh] md:w-[90vw]  bg-white-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-90 border border-gray-100 flex">
         <Sidebar />
-        <MassageContainer/>
+        <MassageContainer />
       </div>
     </div>
   )
