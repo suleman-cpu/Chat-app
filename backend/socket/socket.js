@@ -28,4 +28,4 @@ io.on('connection',(socket)=>{
     
     })
 })
-export {app,server,io,socketID}
+export {app,server,io,socketID,express}

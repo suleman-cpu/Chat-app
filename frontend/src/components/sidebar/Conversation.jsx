@@ -51,8 +51,8 @@ const Conversation = ({ conversation, emo, }) => {
 
           <div className="rounded-full w-12 ">
 
-            {/* <img src={conversation.profilePic} alt="profile picture" /> */}
-            <img src="../../public/Batman_1591.jpeg" alt="hdhfjsf" />
+            <img src={conversation.profilePic} alt="profile picture" />
+            {/* <img src="../../public/Batman_1591.jpeg" alt="hdhfjsf" /> */}
           </div>
 
         </div>

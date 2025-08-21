@@ -9,7 +9,7 @@ const Converstions = () => {
 
 
   return (
-    <div className="overflow-y-scroll overflow-x-hidden md:h-[62vh] h-[60vh]">
+    <div className="overflow-y-scroll overflow-x-hidden md:h-[62vh] h-[70vh]">
       {conversations.map((e)=>{
         return (
           <Conversation key={e._id}  conversation={e} emo={randomEmoji()} />
